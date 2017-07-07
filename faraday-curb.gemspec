@@ -11,7 +11,6 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{A Curb adapter for Faraday.}
   spec.description   = %q{Ever wanted to use Faraday with Curb? Now you can.}
   spec.homepage      = "https://github.com/bitium/faraday-curb"
-  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
