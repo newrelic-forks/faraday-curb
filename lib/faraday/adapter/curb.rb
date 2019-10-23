@@ -52,8 +52,8 @@ module Faraday
 
       def configure_timeout(client, env)
         req = env[:request]
-        client.timeout          = req[:timeout] if req[:timeout]
-        client.connect_timeout  = req[:open_timeout] if req[:open_timeout]
+        client.timeout_ms          = (req[:timeout]*1000).to_i if req[:timeout]
+        client.connect_timeout_ms  = (req[:open_timeout]*1000).to_i if req[:open_timeout]
       end
 
       # Borrowed from Patron:
